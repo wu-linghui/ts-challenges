@@ -8,9 +8,11 @@ type cases = [
   Expect<Equal<IsUnion<{ a: string }|{ a: number }>, true >>,
   Expect<Equal<IsUnion<{ a: string|number }>, false >>,
   Expect<Equal<IsUnion<[string|number]>, false >>,
+  Expect<Equal<IsUnion<[string] | [number]>, true >>,
   // Cases where T resolves to a non-union type.
   Expect<Equal<IsUnion<string|never>, false >>,
   Expect<Equal<IsUnion<string|unknown>, false >>,
   Expect<Equal<IsUnion<string|any>, false >>,
   Expect<Equal<IsUnion<string|'a'>, false >>,
+  // Expect<Equal<IsUnion<never>, false >>,
 ]
