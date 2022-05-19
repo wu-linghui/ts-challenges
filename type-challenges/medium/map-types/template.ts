@@ -13,4 +13,7 @@ type MapTypes<T, R extends Record<"mapTo" | "mapFrom", any>> = {
       : never
     处理的话会返回string | boolean这一联合类型
  */
-// type t14 = MapTypes<{ name: string; date: Date }, { mapFrom: string; mapTo: boolean } | { mapFrom: Date; mapTo: string }>
+// type t14 = MapTypes<
+// { name: string; date: Date }, 、
+// { mapFrom: string; mapTo: boolean } 
+// | { mapFrom: Date; mapTo: string }>
